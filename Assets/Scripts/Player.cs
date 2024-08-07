@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     {
         movementDirection.x = Input.GetAxis("Horizontal");
         movementDirection.z = Input.GetAxis("Vertical");
+        movementDirection.Normalize();
 
         animator.SetFloat("velocity_x", movementDirection.x);
         animator.SetFloat("velocity_y", movementDirection.z);
