@@ -3,7 +3,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float runSpeed;
-    public float strafingSpeed;
 
     CharacterController controller;
     Animator animator;
