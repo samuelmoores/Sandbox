@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float runSpeed;
+    public float playerRunSpeed;
     public float strafingSpeed;
 
     CharacterController controller;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
-        playerSpeed = runSpeed;
+        playerSpeed = playerRunSpeed;
     }
 
     // Update is called once per frame
