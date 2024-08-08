@@ -39,8 +39,6 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0.0f, cameraYaw, 0.0f), Time.deltaTime * 10.0f);
         movementDirection = transform.rotation * movementDirection;
 
-
-
         controller.Move(movementDirection * Time.deltaTime * playerSpeed);
     }
 }
