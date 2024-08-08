@@ -22,6 +22,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Move();
+
+    }
+
+    private void Move()
+    {
         movementDirection.x = Input.GetAxis("Horizontal");
         movementDirection.z = Input.GetAxis("Vertical");
         movementDirection.Normalize();
@@ -34,10 +40,8 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0.0f, cameraYaw, 0.0f), Time.deltaTime * 10.0f);
         movementDirection = transform.rotation * movementDirection;
 
-        
+
 
         controller.Move(movementDirection * Time.deltaTime * playerSpeed);
-
-
     }
 }
